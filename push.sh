@@ -11,8 +11,9 @@ commit_website_files() {
 }
 
 upload_files() {
-  git remote add origin https://${GH_TOKEN}@github.com/susovan87/NSE-Equity-Historical-Data.git > /dev/null 2>&1
-  git push --quiet --set-upstream origin master 
+    echo ${GH_TOKEN}
+  git remote add origin-update https://${GH_TOKEN}@github.com/susovan87/NSE-Equity-Historical-Data.git > /dev/null 2>&1
+  git push --quiet --set-upstream origin-update master 
 }
 
 setup_git

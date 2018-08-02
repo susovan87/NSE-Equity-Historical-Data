@@ -9,7 +9,7 @@ before_script:
 script:
 - "./index.js nse-daily-update"
 after_success:
-- push.sh
+- "./push.sh"
 env:
   global:
   - secure: PAlRAFEbsBV6CMR73BbARWR88jODj/erYnb+wVAHsh8+H2ohyW2l7mgdGFGyjIyoykgNafbQYqSs0ahTuF/zHZ2CM5gRlfegIwX/T1hKyTtHuPIthNfZnpljB0DK9gvdB5jfaAXqC01BG8AiRvwMhFR8677Ovh1m9cQfj69BCcsjhsI3H9xlnUOqObKWj7v6VQ8IdUlZQEN7cAdLYJruxqIO+LFdBDrOTxd031M4Bkl4j1rb/yI4TlLJdUO3C4zbAoiQYI0uhNRsCA0ZO8whBZBaE+4w46BdRFd+9W4I6MCoTGW+aCE+SWZwdBCjeAHx/YtL5TolEjzVP3ryRaAXCe7uoVTPJOhVfiDYd5UlnY3JdMG7qTKoa/pd4QwnxfZjmagb2UICnw+LzIXCA+6nzFoB+3q4r/3KQXCOOqviNmset3Yo1149Z9zwyItY3PrXMi58yx134xvmBSFz5gAEOCGcL8alhcK3T2KNQWFLQvCoJIf+pCR0gh4z0LCPE/62Qn5gYgpPsq9gh+tDwSsm7V+HZB4+RHZ2ETtvolFIAlea92zjedOTlCAQIYvlWCn6CflRwI6Km6K8S3T4felkKzu5P2/qMRNWOzgY+wJoP9Aeg4O8TEn38IqDJJR53XUpnZ1CfLhmvoqah66HlgTorWldoBCvB/rr3MyeWGUzP7c=

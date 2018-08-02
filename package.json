@@ -1,0 +1,28 @@
+{
+  "name": "nse-equity-historical-data",
+  "version": "1.0.0",
+  "description": "NSE trading data scraper & analyzer",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "bin": {
+    "t2": "./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.16.0",
+    "csv": "^3.1.0",
+    "fast-csv": "^2.4.1",
+    "request": "^2.87.0",
+    "throttled-request": "^0.1.1",
+    "through2": "^2.0.3"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "should": "^13.2.2",
+    "sync-request": "^6.0.0"
+  }
+}

@@ -49,4 +49,23 @@ var date = new Date();
 date.setDate(date.getDate() - 1);
 date;
 
-// =((((A2)/60)/60)/24)+DATE(1970,1,1)
+//=((((A2)/60)/60)/24)+DATE(1970,1,1)
+
+// const request = require('request');
+// const URL = 'https://www.nseindia.com/products/content/sec_bhavdata_full.csv';
+
+// request({
+//     url: URL,
+//     timeout: 5000,
+//     headers: {
+//         "Accept": "application/json, text/plain, */*",
+//         "User-Agent": "axios/0.18.0",
+//         "Cache-Control": "no-cache",
+//         "Connection": "keep-alive"
+//     }
+// }, function (err, res, body) {
+//     if (err) { console.error(err); return; }
+
+//     console.log(body);
+// });
+

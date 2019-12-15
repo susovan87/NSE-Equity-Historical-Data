@@ -22,7 +22,16 @@ class NSEHistoricalDailyUpdate {
     }
 
     static getRequestStream(option) {
-        return request({ url: URL });
+        return request({
+            url: URL, 
+            timeout: 5000,
+            headers: {
+                "Accept": "application/json, text/plain, */*",
+                "User-Agent": "axios/0.18.0",
+                "Cache-Control": "no-cache",
+                "Connection": "keep-alive"
+            }
+        });
     }
 
     static appendFeed(symbol, feed) {
@@ -40,6 +49,7 @@ class NSEHistoricalDailyUpdate {
 
     static run() {
         Symbols.getCodes().then(symbols => {
+            console.log(symbols);
             let inCount = 0, outCount = 0, endFlag, noUpdate = false;
             NSEHistoricalDailyUpdate.getRequestStream()
                 .pipe(NSEHistoricalDailyUpdate.wrangle(symbols))
@@ -65,7 +75,7 @@ class NSEHistoricalDailyUpdate {
                 })
                 .on('end', () => {
                     endFlag = true;
-                    if(noUpdate){
+                    if (noUpdate) {
                         console.log(`No update available!!! Last updated on ${NSEHistoricalDailyUpdate.lastrun}.`);
                     }
                 });
